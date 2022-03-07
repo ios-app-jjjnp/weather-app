@@ -1,4 +1,4 @@
-# OriginalWeatherAppNameWow
+# WeatherBeaver
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -55,6 +55,7 @@ At the same time, there are lots of stretch goals that we can establish.
 
 * Uses location sensor for first app run and by user request
 * Support for multiple zip codes
+* Add user registration. Save settings and preferences on parse server.
 * Push notifications on certain events
 * Automatic refresh at periodic intervals
 * Share weather with friends
