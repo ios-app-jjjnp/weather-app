@@ -50,15 +50,17 @@ At the same time, there are lots of stretch goals that we can establish.
 * Settings are saved locally and remain in place between app restarts
 * User can view the current weather
 * User can see upcoming weather
+* User can optionally register and login
+* Logged in user preferences are saved on server. Prioritized over locally stored preferences
 
 **Optional Nice-to-have Stories**
 
 * Uses location sensor for first app run and by user request
 * Support for multiple zip codes
-* Add user registration. Save settings and preferences on parse server.
 * Push notifications on certain events
 * Automatic refresh at periodic intervals
 * Share weather with friends
+* User can view random usernames of others who are interested in the same zip codes
 * Find areas with similar weather
 
 ### 2. Screen Archetypes
@@ -71,6 +73,9 @@ At the same time, there are lots of stretch goals that we can establish.
    * User can enter zip code
    * User can choose how to display temperature (celsius vs fahrenheit)
    * Settings are saved locally and remain in place between app restarts
+   * Logged in user preferences are saved on server. Prioritized over locally stored preferences
+* Login / registration
+   * User can optionally register and login
 
 ### 3. Navigation
 
@@ -85,6 +90,8 @@ At the same time, there are lots of stretch goals that we can establish.
 * Current weather
    * Settings
    * Upcoming weather
+* Login / registration
+  * Current weather
 * Upcoming weather
    * Current weather
 * Settings
