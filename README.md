@@ -103,6 +103,8 @@ At the same time, there are lots of stretch goals that we can establish.
 
 ### [BONUS] Digital Wireframes & Mockups
 
+Done, see above
+
 ### [BONUS] Interactive Prototype
 
 ## Schema 
