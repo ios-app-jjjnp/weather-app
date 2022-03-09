@@ -98,8 +98,8 @@ At the same time, there are lots of stretch goals that we can establish.
    * Current weather
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+<img src="wireframe.png">
 
 ### [BONUS] Digital Wireframes & Mockups
 
