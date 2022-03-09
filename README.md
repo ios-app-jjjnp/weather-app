@@ -108,8 +108,24 @@ At the same time, there are lots of stretch goals that we can establish.
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userID        | String   | unique id for the user post (default field) |
+   | zipcode       | Int      | User’s location |
+   | tempType      | String   | Temp type (fahrenheit/celsius) |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+* Current weather
+   * (Read/GET) Query current weather for zip code
+* Login / registration
+  * (Read/GET) Query logged in user object
+  * (Create/POST) Create new user info
+* Upcoming weather
+   * (Read/GET) Query forecast weather for zip code
+* Settings
+   * (Update/PUT) Update user C vs F preference
+   * (Update/PUT) Update user zip code
