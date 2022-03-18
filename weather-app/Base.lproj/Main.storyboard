@@ -11,8 +11,7 @@
         <!--Login/Register-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,19 +58,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9M-nc-4k6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-Ma-u2B">
                                 <rect key="frame" x="223" y="630" width="96" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                <connections>
+                                    <action selector="onRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqT-my-yMG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Login/Register" id="puM-0x-3Ow"/>
+                    <connections>
+                        <outlet property="passwordField" destination="i2c-VF-22z" id="gpn-67-S5Z"/>
+                        <outlet property="usernameField" destination="T52-jB-wtY" id="wHM-UP-VQZ"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-891.304347826087" y="695.75892857142856"/>
         </scene>
@@ -81,6 +91,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vmD-N6-oDR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oQG-sm-k6y">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -98,8 +109,7 @@
         <!--Weather-->
         <scene sceneID="VbC-nN-UTH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pfr-fe-U3K" sceneMemberID="firstResponder"/>
-                <viewController id="KGg-xO-PC2" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KGg-xO-PC2" customClass="WeatherViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgF-44-6Wm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,14 +131,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="bfR-mS-1UI"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfr-fe-U3K" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-39.130434782608695" y="695.75892857142856"/>
         </scene>
         <!--Forecast-->
         <scene sceneID="MHe-mC-Lo6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EF9-Dt-RoJ" sceneMemberID="firstResponder"/>
-                <viewController id="qY7-AK-uia" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qY7-AK-uia" customClass="ForecastViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYu-Q0-kdk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,14 +156,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Forecast" id="Etk-gs-Gmw"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EF9-Dt-RoJ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="794" y="696"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8Fn-kT-9dZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dtQ-ca-0Xe" sceneMemberID="firstResponder"/>
-                <viewController id="IOJ-W6-eTT" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IOJ-W6-eTT" customClass="SettingsViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RL5-e4-waP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,12 +196,25 @@
                                     <segment title="Celsius"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-AN-OQQ">
+                                <rect key="frame" x="164" y="427" width="87" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="IOJ-W6-eTT" eventType="touchUpInside" id="sgC-OX-KVg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="08d-5G-OWK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="4rm-0l-IK9"/>
+                    <connections>
+                        <outlet property="zipcodeField" destination="g3H-2Q-Kx5" id="RRn-Cz-zP6"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtQ-ca-0Xe" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1682.608695652174" y="695.75892857142856"/>
         </scene>
