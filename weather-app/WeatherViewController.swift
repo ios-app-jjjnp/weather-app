@@ -7,14 +7,18 @@
 
 import UIKit
 import AlamofireImage
+import Alamofire
 import Parse
+import SwiftyJSON
 
 class WeatherViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(UserDefaults.standard.string(forKey: "hourly"))
     }
     
 

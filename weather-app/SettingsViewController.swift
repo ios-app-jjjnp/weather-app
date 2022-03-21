@@ -7,7 +7,9 @@
 
 import UIKit
 import AlamofireImage
+import Alamofire
 import Parse
+import SwiftyJSON
 
 class SettingsViewController: UIViewController {
 
@@ -25,6 +27,41 @@ class SettingsViewController: UIViewController {
     @IBAction func onSubmit(_ sender: Any) {
         //TODO, ideally add a simple zip code validation
         UserDefaults.standard.set(zipcodeField.text, forKey: "zip")
+        
+        // Realistically, this request chain should be done with whatever promise mechanism exists in swift
+        // this is a really ugly hack for now
+        if (UserDefaults.standard.string(forKey: "zip")?.count ?? 0 > 0) {
+            let base = "https://ios-app-jjjnp.github.io/data/" + UserDefaults.standard.string(forKey: "zip")! + ".json"
+//            print(base)
+            AF.request(base).validate().responseJSON { response in
+                switch response.result {
+                    case .success(let value):
+                    let json = JSON(value)
+//                    print(json["lat"])
+                    UserDefaults.standard.set(json["lat"].rawString(), forKey: "lat")
+                    UserDefaults.standard.set(json["long"].rawString(), forKey: "long")
+                    UserDefaults.standard.set(json["place_name"].rawString(), forKey: "placeName")
+                    UserDefaults.standard.set(json["state_abbrv"].rawString(), forKey: "stateAbbrv")
+                        
+                    let gridBase = "https://api.weather.gov/points/" + json["lat"].rawString()! + "," + json["long"].rawString()!
+                    
+                    AF.request(gridBase).validate().responseJSON { response in
+                        switch response.result {
+                            case .success(let value):
+                            let json = JSON(value)
+                            let props = json["properties"]
+                            UserDefaults.standard.set(props["forecast"].rawString(), forKey: "forecast")
+                            UserDefaults.standard.set(props["forecastHourly"].rawString(), forKey: "hourly")
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                    
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
     }
     
     /*

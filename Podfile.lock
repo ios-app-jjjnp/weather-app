@@ -7,10 +7,12 @@ PODS:
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
     - Bolts/Tasks (= 1.9.1)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - Parse
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Parse
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 32a32c2250e93c37feae4ba8a6d1cc9e762edd93
+PODFILE CHECKSUM: 06abcc667b1c7b1f972b8c09a1ead5cb6dfb7e32
 
 COCOAPODS: 1.11.2
