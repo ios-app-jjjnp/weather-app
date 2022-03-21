@@ -55,7 +55,7 @@ At the same time, there are lots of stretch goals that we can establish.
 
 **Sprint 1 Progress**
 
-sprint1.mp4
+<img src="sprint1.mp4" />
 
 **Optional Nice-to-have Stories**
 
