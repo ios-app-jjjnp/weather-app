@@ -55,7 +55,7 @@ At the same time, there are lots of stretch goals that we can establish.
 
 **Sprint 1 Progress**
 
-<img src="sprint1.mp4" />
+https://user-images.githubusercontent.com/8713509/159265783-b8cd0f42-376f-48d2-8632-80ccb051bb9e.mp4
 
 **Optional Nice-to-have Stories**
 
