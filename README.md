@@ -45,13 +45,17 @@ At the same time, there are lots of stretch goals that we can establish.
 
 **Required Must-have Stories**
 
-* User can enter zip code
+* ✅ User can enter zip code
 * User can choose how to display temperature (celsius vs fahrenheit)
-* Settings are saved locally and remain in place between app restarts
-* User can view the current weather
+* ✅ Settings are saved locally and remain in place between app restarts
+* ✅ User can view the current weather
 * User can see upcoming weather
 * User can optionally register and login
 * Logged in user preferences are saved on server. Prioritized over locally stored preferences
+
+**Sprint 1 Progress**
+
+sprint1.mp4
 
 **Optional Nice-to-have Stories**
 
