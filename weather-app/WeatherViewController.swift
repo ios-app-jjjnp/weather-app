@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var iconNow: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var shortForecast: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class WeatherViewController: UIViewController {
                     let now = json["properties"]["periods"][0]
                     let temp = now["temperature"].rawString()
                     let unit = now["temperatureUnit"].rawString()
+                    let place = UserDefaults.standard.string(forKey: "placeName")
+                    let state = UserDefaults.standard.string(forKey: "stateAbbrv")
+                    
+                    self.locationLabel.text = place! + ", " + state!
                     
                     self.tempLabel.text = temp! + " " + unit!
                     self.shortForecast.text = now["shortForecast"].rawString()!

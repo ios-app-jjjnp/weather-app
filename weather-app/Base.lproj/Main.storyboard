@@ -139,6 +139,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIe-pt-FXM">
+                                <rect key="frame" x="27" y="177" width="367" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kCz-8Q-Tqz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,6 +153,7 @@
                     <tabBarItem key="tabBarItem" title="Weather" id="bfR-mS-1UI"/>
                     <connections>
                         <outlet property="iconNow" destination="6Vv-IB-Jft" id="72h-5d-Dps"/>
+                        <outlet property="locationLabel" destination="aIe-pt-FXM" id="Tng-2h-hld"/>
                         <outlet property="shortForecast" destination="mjr-jg-6or" id="PS3-TY-b3X"/>
                         <outlet property="tempLabel" destination="q5j-Gb-gki" id="g2l-q1-uLt"/>
                     </connections>
