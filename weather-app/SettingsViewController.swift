@@ -17,9 +17,14 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if (UserDefaults.standard.string(forKey: "zip")?.count ?? 0 > 0) {
+            zipcodeField.text = UserDefaults.standard.string(forKey: "zip")
+        }
     }
     
     @IBAction func onSubmit(_ sender: Any) {
+        //TODO, ideally add a simple zip code validation
+        UserDefaults.standard.set(zipcodeField.text, forKey: "zip")
     }
     
     /*
