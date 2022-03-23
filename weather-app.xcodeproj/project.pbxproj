@@ -13,6 +13,7 @@
 		00CE630027E17A6B00DC330D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CE62FE27E17A6B00DC330D /* Main.storyboard */; };
 		00CE630227E17A6B00DC330D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CE630127E17A6B00DC330D /* Assets.xcassets */; };
 		00CE630527E17A6B00DC330D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CE630327E17A6B00DC330D /* LaunchScreen.storyboard */; };
+		16D85CDB27EBDBE300287815 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D85CDA27EBDBE300287815 /* ForecastCell.swift */; };
 		16ED712727EBB56D0060354A /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED712627EBB56D0060354A /* Secrets.swift */; };
 		33C94AD8D146287D14FBCEE6 /* Pods_weather_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC95517FDFA977985DC72FD5 /* Pods_weather_app.framework */; };
 		4109183927E440AC00686DD3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109183827E440AC00686DD3 /* WeatherViewController.swift */; };
@@ -30,6 +31,7 @@
 		00CE630127E17A6B00DC330D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00CE630427E17A6B00DC330D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00CE630627E17A6B00DC330D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D85CDA27EBDBE300287815 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		16ED712627EBB56D0060354A /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		4109183827E440AC00686DD3 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		4109183A27E440EC00686DD3 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				00CE630327E17A6B00DC330D /* LaunchScreen.storyboard */,
 				00CE630627E17A6B00DC330D /* Info.plist */,
 				16ED712627EBB56D0060354A /* Secrets.swift */,
+				16D85CDA27EBDBE300287815 /* ForecastCell.swift */,
 			);
 			path = "weather-app";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				16ED712727EBB56D0060354A /* Secrets.swift in Sources */,
 				00CE62FD27E17A6A00DC330D /* ViewController.swift in Sources */,
 				4109183927E440AC00686DD3 /* WeatherViewController.swift in Sources */,
+				16D85CDB27EBDBE300287815 /* ForecastCell.swift in Sources */,
 				4109183B27E440EC00686DD3 /* ForecastViewController.swift in Sources */,
 				00CE62F927E17A6A00DC330D /* AppDelegate.swift in Sources */,
 				00CE62FB27E17A6A00DC330D /* SceneDelegate.swift in Sources */,
