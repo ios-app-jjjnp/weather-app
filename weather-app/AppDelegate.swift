@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.clientKey = Secrets.clientKey
             $0.server = Secrets.server
         }
+        Parse.initialize(with: parseConfig)
         
         return true
     }

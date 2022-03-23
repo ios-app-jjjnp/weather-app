@@ -51,7 +51,7 @@
                                 <rect key="frame" x="69" y="533" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-fK-WaS">
                                 <rect key="frame" x="82" y="630" width="83" height="31"/>
@@ -79,6 +79,7 @@
                     <connections>
                         <outlet property="passwordField" destination="i2c-VF-22z" id="gpn-67-S5Z"/>
                         <outlet property="usernameField" destination="T52-jB-wtY" id="wHM-UP-VQZ"/>
+                        <segue destination="KGg-xO-PC2" kind="presentation" identifier="loginSegue" id="mdj-KS-AqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,9 +110,9 @@
         <!--Weather-->
         <scene sceneID="VbC-nN-UTH">
             <objects>
-                <viewController id="KGg-xO-PC2" customClass="WeatherViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KGg-xO-PC2" customClass="WeatherViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgF-44-6Wm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-mj-vGG">
@@ -151,6 +152,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="bfR-mS-1UI"/>
+                    <navigationItem key="navigationItem" id="dDp-Fw-Leo"/>
                     <connections>
                         <outlet property="iconNow" destination="6Vv-IB-Jft" id="72h-5d-Dps"/>
                         <outlet property="locationLabel" destination="aIe-pt-FXM" id="Tng-2h-hld"/>
@@ -246,6 +248,9 @@
             <point key="canvasLocation" x="1682.608695652174" y="695.75892857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mdj-KS-AqI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="180" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">
