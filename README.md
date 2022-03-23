@@ -1,5 +1,15 @@
 # WeatherBeaver
 
+To build, add Secrets.swift file with something like:
+
+```swift
+enum Secrets {
+  static let applicationId = "app-id-secret"
+  static let clientKey = "client-key-secret"
+  static let server = "https://parseapi.back4app.com"
+}
+```
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
