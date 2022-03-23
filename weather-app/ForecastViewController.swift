@@ -9,6 +9,9 @@ import UIKit
 import AlamofireImage
 import Parse
 
+import Alamofire
+import SwiftyJSON
+
 class ForecastViewController: UIViewController {
 
     override func viewDidLoad() {

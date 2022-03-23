@@ -18,10 +18,13 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var shortForecast: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
+    // This loads the view only the first time
+    // Does not change when a new ZIP code is entered
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        print("view loaded")
+        
         // Do any additional setup after loading the view.
+        
         print(UserDefaults.standard.string(forKey: "hourly"))
         
         if (UserDefaults.standard.string(forKey: "hourly")?.count ?? 0 > 0) {
@@ -51,6 +54,48 @@ class WeatherViewController: UIViewController {
             }
         }
     }
+        
+    // Reloads the page every time you look at the current weather
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        print("view appeared")
+        
+        print(UserDefaults.standard.string(forKey: "hourly"))
+        
+        if (UserDefaults.standard.string(forKey: "hourly")?.count ?? 0 > 0) {
+            let base = UserDefaults.standard.string(forKey: "hourly")!
+            AF.request(base).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    let now = json["properties"]["periods"][0]
+                    let temp = now["temperature"].rawString()
+                    let unit = now["temperatureUnit"].rawString()
+                    let place = UserDefaults.standard.string(forKey: "placeName")
+                    let state = UserDefaults.standard.string(forKey: "stateAbbrv")
+                    
+                    self.locationLabel.text = place! + ", " + state!
+                    
+                    self.tempLabel.text = temp! + " " + unit!
+                    self.shortForecast.text = now["shortForecast"].rawString()!
+                    
+                    let iconBase = now["icon"].rawString()!
+                    let iconURL = URL(string: iconBase)
+                    self.iconNow.af.setImage(withURL: iconURL!)
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+        
+        
+        
+        
+        
+        
+    
     
 
     /*
