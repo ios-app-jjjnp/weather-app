@@ -9,6 +9,11 @@ import UIKit
 
 class ForecastCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var shortForecast: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
