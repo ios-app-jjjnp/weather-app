@@ -24,74 +24,39 @@ class WeatherViewController: UIViewController {
         print("view loaded")
         
         // Do any additional setup after loading the view.
-        
-        print(UserDefaults.standard.string(forKey: "hourly"))
-        
-        if (UserDefaults.standard.string(forKey: "hourly")?.count ?? 0 > 0) {
-            let base = UserDefaults.standard.string(forKey: "hourly")!
-            
-            print(base)
-            
-            AF.request(base).validate().responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    let now = json["properties"]["periods"][0]
-                    let temp = now["temperature"].rawString()
-                    let unit = now["temperatureUnit"].rawString()
-                    let place = UserDefaults.standard.string(forKey: "placeName")
-                    let state = UserDefaults.standard.string(forKey: "stateAbbrv")
-                    
-                    self.locationLabel.text = place! + ", " + state!
-                    
-                    self.tempLabel.text = temp! + " " + unit!
-                    self.shortForecast.text = now["shortForecast"].rawString()!
-                    
-                    let iconBase = now["icon"].rawString()!
-                    let iconURL = URL(string: iconBase)
-                    self.iconNow.af.setImage(withURL: iconURL!)
-                    
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
+//        loadWeather()
     }
         
     // Reloads the page every time you look at the current weather
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
-        print("view appeared")
-
-        print(UserDefaults.standard.string(forKey: "hourly"))
-
+        
+        loadWeather()
+    }
+    
+    func loadWeather() {
         if (UserDefaults.standard.string(forKey: "hourly")?.count ?? 0 > 0) {
             let base = UserDefaults.standard.string(forKey: "hourly")!
-            
-            print("base is", base)
-            
+
             AF.request(base).validate().responseJSON { response in
                 switch response.result {
                 case .success(let value):
                     let json = JSON(value)
                     let now = json["properties"]["periods"][0]
-                    
-                    print("now is", now)
-                                       
                     let temp = now["temperature"].rawString()
                     let unit = now["temperatureUnit"].rawString()
                     let place = UserDefaults.standard.string(forKey: "placeName")
                     let state = UserDefaults.standard.string(forKey: "stateAbbrv")
-
+                    
                     self.locationLabel.text = place! + ", " + state!
-
+                    
                     self.tempLabel.text = temp! + " " + unit!
                     self.shortForecast.text = now["shortForecast"].rawString()!
-
+                    
                     let iconBase = now["icon"].rawString()!
                     let iconURL = URL(string: iconBase)
                     self.iconNow.af.setImage(withURL: iconURL!)
-
+                    
                 case .failure(let error):
                     print(error)
                 }

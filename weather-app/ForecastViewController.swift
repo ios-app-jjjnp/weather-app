@@ -49,10 +49,9 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     // This loads the view only the first time
     // Does not change when a new ZIP code is entered
-    override func viewDidLoad() {
-        print("view loaded")
-        
-        super.viewDidLoad()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         tableView.dataSource = self
         tableView.delegate = self
