@@ -835,7 +835,7 @@
 		9D22B328CFD71AF6A43B3E67993F143F /* PFAnalyticsUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsUtilities.h; path = Parse/Parse/Internal/Analytics/Utilities/PFAnalyticsUtilities.h; sourceTree = "<group>"; };
 		9D2800917F01ABE6C85A46ADB060A469 /* PFURLSessionFileDownloadTaskDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionFileDownloadTaskDelegate.m; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionFileDownloadTaskDelegate.m; sourceTree = "<group>"; };
 		9D8A5F3BB35D7DB5204A4D0A4996590A /* PFProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFProduct.m; path = Parse/Parse/PFProduct.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9B0D78583821C366EC89D4B329F250 /* PFObjectSubclassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectSubclassInfo.m; path = Parse/Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.m; sourceTree = "<group>"; };
 		9DB1715FA2E7D9C462C454E170C0DA5A /* PFSQLiteDatabaseResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSQLiteDatabaseResult.m; path = Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseResult.m; sourceTree = "<group>"; };
 		9DEEBF7BA8C9B9A35455AE44EEEAC920 /* PFRESTAnalyticsCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTAnalyticsCommand.h; path = Parse/Parse/Internal/Commands/PFRESTAnalyticsCommand.h; sourceTree = "<group>"; };
@@ -900,7 +900,7 @@
 		B9CD0433C38C7A402978B4CAA1E06F35 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		BACC1FE2FAFD7E2678254C2C5257BF7A /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
 		BB1CCEFE3C445F8FE4FD4B5D2334C5D8 /* UIButton+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+AlamofireImage.swift"; path = "Source/UIButton+AlamofireImage.swift"; sourceTree = "<group>"; };
-		BB70CA5F52CDE7C8FCDDA31C39275C21 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
+		BB70CA5F52CDE7C8FCDDA31C39275C21 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
 		BC505BCA46F59224D31F94F8692605FC /* PFRESTCloudCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTCloudCommand.h; path = Parse/Parse/Internal/Commands/PFRESTCloudCommand.h; sourceTree = "<group>"; };
 		BC9E006BDBF5EB67261890FA8EFD187A /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		BDAFCEAC24A487328C050C07FA21C198 /* PFPushController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushController.h; path = Parse/Parse/Internal/Push/Controller/PFPushController.h; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 		F768186CD3DF855E0DAF169754410352 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse/Parse/Parse.h; sourceTree = "<group>"; };
 		F83921EF89BF7E6773CC9FC5D5C037F7 /* PFQuery+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFQuery+Deprecated.h"; path = "Parse/Parse/PFQuery+Deprecated.h"; sourceTree = "<group>"; };
 		F844BE9E6FE8F2117DCD65E4D446AED8 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
-		F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bolts; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8747D24C4C25700FC1D759AF9716F79 /* PFUserState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserState_Private.h; path = Parse/Parse/Internal/User/State/PFUserState_Private.h; sourceTree = "<group>"; };
 		F97BB72C9E2DB654D389714DA90E1786 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		F980AB0BD1396D0E8A08978DDCF1C991 /* PFObjectEstimatedData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectEstimatedData.m; path = Parse/Parse/Internal/Object/EstimatedData/PFObjectEstimatedData.m; sourceTree = "<group>"; };
@@ -1136,7 +1136,6 @@
 				D5D52BAF0DB53885E87428E5FEAC9A2E /* Support Files */,
 				FE6B3EB501B15A6BA72CD9C6EE0F1722 /* Tasks */,
 			);
-			name = Bolts;
 			path = Bolts;
 			sourceTree = "<group>";
 		};
@@ -1197,7 +1196,6 @@
 				5F87228BD3E6FB6E7EA252E99AC89917 /* Validation.swift */,
 				8754DA504CB76A5521EB141B25AA4679 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1237,7 +1235,6 @@
 				AE190CADA0A0047F456E4FD8E2710378 /* SwiftyJSON.swift */,
 				9A31803B69574B495E731078A16EA977 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -1246,7 +1243,7 @@
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				C8498160B5D29EF2745E4D41F2D971B5 /* AlamofireImage */,
-				F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts */,
+				F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts.framework */,
 				0652F2476C7C87C6C0F6CB68072EA25F /* Parse */,
 				ED7ADA84A7005589821D254428CD2D26 /* Parse-Parse */,
 				4468B9F0F8E4BBD6A4E8C6199F72F4A9 /* Pods-weather-app */,
@@ -1276,7 +1273,6 @@
 				F20F93906798E0C17978DB1684A8E4FA /* Core */,
 				CF4331202981C40059C8B300F704C06F /* Support Files */,
 			);
-			name = Parse;
 			path = Parse;
 			sourceTree = "<group>";
 		};
@@ -1310,7 +1306,6 @@
 				74412349DB2803C9C2A01AA7B14A46DA /* UIImageView+AlamofireImage.swift */,
 				AE7579F3E5261EED8A46845FD36FAC05 /* Support Files */,
 			);
-			name = AlamofireImage;
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
@@ -2072,7 +2067,7 @@
 			);
 			name = Bolts;
 			productName = Bolts;
-			productReference = F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts */;
+			productReference = F84B331B5D6AAF1548DD1BB004AE5C2A /* Bolts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7F3FE5658AEC4AF2B296EDA73A218182 /* Parse */ = {
@@ -2890,7 +2885,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Bolts/Bolts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Bolts/Bolts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3088,7 +3083,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Bolts/Bolts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Bolts/Bolts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

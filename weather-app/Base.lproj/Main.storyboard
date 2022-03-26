@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vmD-N6-oDR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -54,7 +54,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-fK-WaS">
-                                <rect key="frame" x="82" y="630" width="83" height="31"/>
+                                <rect key="frame" x="69" y="598" width="83" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
@@ -63,12 +63,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-Ma-u2B">
-                                <rect key="frame" x="223" y="630" width="96" height="31"/>
+                                <rect key="frame" x="247" y="598" width="96" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register"/>
                                 <connections>
                                     <action selector="onRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqT-my-yMG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wp-rd-hJ9">
+                                <rect key="frame" x="101" y="654" width="196" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Continue as Guest" titleAlignment="automatic">
+                                    <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcz-dw-XX5"/>
+                                    <segue destination="vmD-N6-oDR" kind="presentation" identifier="guestLoginSeque" id="W1v-ub-90Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,14 +89,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Login/Register" id="puM-0x-3Ow"/>
                     <connections>
+                        <outlet property="guestButton" destination="0Wp-rd-hJ9" id="3DW-B3-Po5"/>
                         <outlet property="passwordField" destination="i2c-VF-22z" id="gpn-67-S5Z"/>
                         <outlet property="usernameField" destination="T52-jB-wtY" id="wHM-UP-VQZ"/>
-                        <segue destination="KGg-xO-PC2" kind="presentation" identifier="loginSegue" id="mdj-KS-AqI"/>
+                        <segue destination="vmD-N6-oDR" kind="presentation" identifier="loginSegue" id="ABF-ha-wDS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-891.304347826087" y="695.75892857142856"/>
+            <point key="canvasLocation" x="-958" y="125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mb1-Ix-fg5">
@@ -97,7 +110,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e9t-oq-VFZ"/>
                         <segue destination="KGg-xO-PC2" kind="relationship" relationship="viewControllers" id="dpO-0G-su6"/>
                         <segue destination="qY7-AK-uia" kind="relationship" relationship="viewControllers" id="yrT-uh-agU"/>
                         <segue destination="IOJ-W6-eTT" kind="relationship" relationship="viewControllers" id="fEF-rI-j9v"/>
@@ -112,7 +124,7 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KGg-xO-PC2" customClass="WeatherViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgF-44-6Wm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-mj-vGG">
@@ -169,7 +181,7 @@
             <objects>
                 <viewController id="qY7-AK-uia" customClass="ForecastViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYu-Q0-kdk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Future Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEX-i2-eGj">
@@ -245,7 +257,7 @@
             <objects>
                 <viewController id="IOJ-W6-eTT" customClass="SettingsViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RL5-e4-waP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-YQ-jqp">
@@ -300,12 +312,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dpO-0G-su6"/>
+        <segue reference="W1v-ub-90Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="180" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

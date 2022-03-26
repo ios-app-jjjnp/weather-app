@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var guestButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,9 @@ class LoginViewController: UIViewController {
                 print("Error: \(error?.localizedDescription)")
             }
         }
+    }
+    
+    @IBAction func onGuest(_ sender: Any) {
     }
     
     /*
