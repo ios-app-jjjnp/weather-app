@@ -56,6 +56,41 @@ class SettingsViewController: UIViewController {
                             let props = json["properties"]
                             UserDefaults.standard.set(props["forecast"].rawString(), forKey: "forecast")
                             UserDefaults.standard.set(props["forecastHourly"].rawString(), forKey: "hourly")
+                            
+                            if (PFUser.current() != nil) {
+                                //as a simplification, always assume the user exists in the database
+                                let query = PFQuery(className: "Settings")
+                                
+                                query.whereKey("userID", equalTo: PFUser.current())
+                                query.findObjectsInBackground { (objects:[PFObject]?, error: Error?)
+                                    in
+                                    if let error = error {
+                                        print(error.localizedDescription)
+                                    } else if let objects = objects {
+                                        
+                                        // there should only be one matching object unless something went wrong
+                                        // ideally there'd be a check
+                                        for settings in objects {
+                                            settings["zip"] = UserDefaults.standard.string(forKey: "zip")
+                                            settings["lat"] = UserDefaults.standard.string(forKey: "lat")
+                                            settings["long"] = UserDefaults.standard.string(forKey: "long")
+                                            settings["placeName"] = UserDefaults.standard.string(forKey: "placeName")
+                                            settings["stateAbbrv"] = UserDefaults.standard.string(forKey: "stateAbbrv")
+                                            settings["forecast"] = UserDefaults.standard.string(forKey: "forecast")
+                                            settings["hourly"] = UserDefaults.standard.string(forKey: "hourly")
+
+                                            settings.saveInBackground { (success, error) in
+                                                if success {
+                                                    print("saved settings")
+                                                } else {
+                                                    print("error saving settings")
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
                         case .failure(let error):
                             print(error)
                         }
@@ -71,6 +106,35 @@ class SettingsViewController: UIViewController {
     
     @IBAction func unitChanged(_ sender: Any) {
         UserDefaults.standard.set(unitControl.selectedSegmentIndex, forKey: "unitType")
+        
+        if (PFUser.current() != nil) {
+            //as a simplification, always assume the user exists in the database
+            let query = PFQuery(className: "Settings")
+            
+            query.whereKey("userID", equalTo: PFUser.current())
+            query.findObjectsInBackground { (objects:[PFObject]?, error: Error?)
+                in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let objects = objects {
+                    
+                    // there should only be one matching object unless something went wrong
+                    // ideally there'd be a check
+                    for settings in objects {
+                        settings["unitType"] = UserDefaults.standard.integer(forKey: "unitType")
+
+                        settings.saveInBackground { (success, error) in
+                            if success {
+                                print("saved settings")
+                            } else {
+                                print("error saving settings")
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
     
     /*

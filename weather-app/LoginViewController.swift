@@ -30,8 +30,32 @@ class LoginViewController: UIViewController {
             (user, error) in
             if user != nil {
                 print("logging in")
+                let query = PFQuery(className: "Settings")
 
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                query.whereKey("userID", equalTo: PFUser.current())
+                query.findObjectsInBackground { (objects:[PFObject]?, error: Error?)
+                    in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else if let objects = objects {
+
+                        // there should only be one matching object unless something went wrong
+                        // ideally there'd be a check
+                        for settings in objects {
+                            UserDefaults.standard.set(settings["zip"], forKey: "zip")
+                            UserDefaults.standard.set(settings["lat"], forKey: "lat")
+                            UserDefaults.standard.set(settings["long"], forKey: "long")
+                            UserDefaults.standard.set(settings["placeName"], forKey: "placeName")
+                            UserDefaults.standard.set(settings["stateAbbrv"], forKey: "stateAbbrv")
+                            UserDefaults.standard.set(settings["forecast"], forKey: "forecast")
+                            UserDefaults.standard.set(settings["hourly"], forKey: "hourly")
+                            UserDefaults.standard.set(settings["unitType"], forKey: "unitType")
+                        }
+                        
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    }
+                }
+
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
@@ -45,6 +69,26 @@ class LoginViewController: UIViewController {
         
         user.signUpInBackground { (success, error) in
             if error == nil {
+                let settings = PFObject(className: "Settings")
+                
+                settings["userID"] = PFUser.current()
+                settings["zip"] = UserDefaults.standard.string(forKey: "zip")
+                settings["lat"] = UserDefaults.standard.string(forKey: "lat")
+                settings["long"] = UserDefaults.standard.string(forKey: "long")
+                settings["placeName"] = UserDefaults.standard.string(forKey: "placeName")
+                settings["stateAbbrv"] = UserDefaults.standard.string(forKey: "stateAbbrv")
+                settings["forecast"] = UserDefaults.standard.string(forKey: "forecast")
+                settings["hourly"] = UserDefaults.standard.string(forKey: "hourly")
+                settings["unitType"] = UserDefaults.standard.integer(forKey: "unitType")
+                
+                settings.saveInBackground { (success, error) in
+                    if success {
+                        print("new user settings added")
+                    } else {
+                        print("error setting up new user settings")
+                    }
+                }
+                
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
