@@ -59,9 +59,13 @@ At the same time, there are lots of stretch goals that we can establish.
 * User can choose how to display temperature (celsius vs fahrenheit)
 * ✅ Settings are saved locally and remain in place between app restarts
 * ✅ User can view the current weather
-* User can see upcoming weather
+* ✅ User can see upcoming weather
 * User can optionally register and login
 * Logged in user preferences are saved on server. Prioritized over locally stored preferences
+
+**Sprint 2 Progress**
+
+https://user-images.githubusercontent.com/8713509/160332345-7fb9e6c1-b422-41af-8fec-e22240736e8d.mp4
 
 **Sprint 1 Progress**
 
