@@ -30,11 +30,8 @@ class LoginViewController: UIViewController {
             (user, error) in
             if user != nil {
                 print("logging in")
-                
-                // todo
-                // some sort of navigation would make sense at this point but I don't know
-                // how to keep the nav bar, below doesn't
-//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
@@ -47,7 +44,7 @@ class LoginViewController: UIViewController {
         user.password = passwordField.text
         
         user.signUpInBackground { (success, error) in
-            if error != nil {
+            if error == nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")

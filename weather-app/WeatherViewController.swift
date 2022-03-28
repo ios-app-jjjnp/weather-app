@@ -43,10 +43,19 @@ class WeatherViewController: UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     let now = json["properties"]["periods"][0]
-                    let temp = now["temperature"].rawString()
-                    let unit = now["temperatureUnit"].rawString()
+                    var temp = now["temperature"].rawString()
+                    var unit = now["temperatureUnit"].rawString()
                     let place = UserDefaults.standard.string(forKey: "placeName")
                     let state = UserDefaults.standard.string(forKey: "stateAbbrv")
+                    
+                    // Check if the user wants celcius. Assume that API always passes units as F
+                    if(UserDefaults.standard.integer(forKey: "unitType") == 1) {
+                        var numTemp = Double(temp!) ?? 32.0
+                        numTemp = (numTemp - 32.0) * (5.0/9.0)
+                        temp = String(format: "%.1f", numTemp)
+                        unit = "C"
+                    }
+                    
                     
                     self.locationLabel.text = place! + ", " + state!
                     

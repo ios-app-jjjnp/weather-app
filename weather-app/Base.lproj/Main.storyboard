@@ -139,7 +139,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5j-Gb-gki">
-                                <rect key="frame" x="27" y="271" width="40" height="21"/>
+                                <rect key="frame" x="27" y="271" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -287,6 +287,9 @@
                                     <segment title="Fahrenheit"/>
                                     <segment title="Celsius"/>
                                 </segments>
+                                <connections>
+                                    <action selector="unitChanged:" destination="IOJ-W6-eTT" eventType="valueChanged" id="D91-aR-Hl8"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-AN-OQQ">
                                 <rect key="frame" x="164" y="427" width="87" height="43"/>
@@ -303,6 +306,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="4rm-0l-IK9"/>
                     <connections>
+                        <outlet property="unitControl" destination="jIr-dt-GJ7" id="RSu-sa-suW"/>
                         <outlet property="zipcodeField" destination="g3H-2Q-Kx5" id="RRn-Cz-zP6"/>
                     </connections>
                 </viewController>
@@ -312,7 +316,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W1v-ub-90Y"/>
+        <segue reference="ABF-ha-wDS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="180" width="180" height="180"/>

@@ -28,8 +28,16 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
 
         let now = self.forecast[indexPath.row]
 
-        let temp = now["temperature"].rawString()
-        let unit = now["temperatureUnit"].rawString()
+        var temp = now["temperature"].rawString()
+        var unit = now["temperatureUnit"].rawString()
+        
+        // Check if the user wants celcius. Assume that API always passes units as F
+        if(UserDefaults.standard.integer(forKey: "unitType") == 1) {
+            var numTemp = Double(temp!) ?? 32.0
+            numTemp = (numTemp - 32.0) * (5.0/9.0)
+            temp = String(format: "%.1f", numTemp)
+            unit = "C"
+        }
         
         cell.nameLabel.text = now["name"].rawString()
         cell.tempLabel.text = temp! + " " + unit!

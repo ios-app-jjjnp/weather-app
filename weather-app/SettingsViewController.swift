@@ -15,13 +15,17 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var zipcodeField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var unitControl: UISegmentedControl!
 
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         if (UserDefaults.standard.string(forKey: "zip")?.count ?? 0 > 0) {
             zipcodeField.text = UserDefaults.standard.string(forKey: "zip")
         }
+        
+        // if no initial value assigned, it should default to 0
+        unitControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "unitType")
     }
     
     @IBAction func onSubmit(_ sender: Any) {
@@ -62,6 +66,11 @@ class SettingsViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    @IBAction func unitChanged(_ sender: Any) {
+        UserDefaults.standard.set(unitControl.selectedSegmentIndex, forKey: "unitType")
     }
     
     /*
