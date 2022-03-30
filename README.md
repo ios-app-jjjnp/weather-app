@@ -1,25 +1,16 @@
 # WeatherBeaver
 
-To build, add Secrets.swift file with something like:
-
-```swift
-enum Secrets {
-  static let applicationId = "app-id-secret"
-  static let clientKey = "client-key-secret"
-  static let server = "https://parseapi.back4app.com"
-}
-```
-
-## Table of Contents
-1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+# Team
+Jacob Dumas
+Pauline Cheng
+Nick DiMeglio
+Jonathan Rockett
+Jason
 
 ## Overview
-### Description
+### App Description
 
-App that lets users check on the weather in a zip code and see information tailored to them based on their settings. 
+The WeatherBeaver app allows users to view the current weather and future forecast based on the inputted zip code. 
 
 ### App Evaluation
 
@@ -29,7 +20,7 @@ Weather
 
 - **Mobile:**
 
-It can use location sensors and push notifications that alert users about important changes or events.
+This app is accessible to all users. They can either register and create an account or access it as a guest without creating a login.
 
 - **Story:**
 
@@ -56,30 +47,14 @@ At the same time, there are lots of stretch goals that we can establish.
 **Required Must-have Stories**
 
 * ✅ User can enter zip code
-* User can choose how to display temperature (celsius vs fahrenheit)
 * ✅ Settings are saved locally and remain in place between app restarts
 * ✅ User can view the current weather
 * ✅ User can see upcoming weather
-* User can optionally register and login
-* Logged in user preferences are saved on server. Prioritized over locally stored preferences
-
-**Sprint 2 Progress**
-
-https://user-images.githubusercontent.com/8713509/160332345-7fb9e6c1-b422-41af-8fec-e22240736e8d.mp4
-
-**Sprint 1 Progress**
-
-https://user-images.githubusercontent.com/8713509/159265783-b8cd0f42-376f-48d2-8632-80ccb051bb9e.mp4
+* ✅ User can optionally register and login
+* ✅ Logged in user preferences are saved on server. Prioritized over locally stored preferences
 
 **Optional Nice-to-have Stories**
 
-* Uses location sensor for first app run and by user request
-* Support for multiple zip codes
-* Push notifications on certain events
-* Automatic refresh at periodic intervals
-* Share weather with friends
-* User can view random usernames of others who are interested in the same zip codes
-* Find areas with similar weather
 
 ### 2. Screen Archetypes
 
@@ -89,7 +64,6 @@ https://user-images.githubusercontent.com/8713509/159265783-b8cd0f42-376f-48d2-8
    * User can see upcoming weather
 * Settings
    * User can enter zip code
-   * User can choose how to display temperature (celsius vs fahrenheit)
    * Settings are saved locally and remain in place between app restarts
    * Logged in user preferences are saved on server. Prioritized over locally stored preferences
 * Login / registration
@@ -125,9 +99,9 @@ Done, see above
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
+## TODO Schema 
 [This section will be completed in Unit 9]
-### Models
+### TODO Models
 
 #### Post
 
@@ -147,5 +121,6 @@ Done, see above
 * Upcoming weather
    * (Read/GET) Query forecast weather for zip code
 * Settings
-   * (Update/PUT) Update user C vs F preference
    * (Update/PUT) Update user zip code
+
+### Final Demo GIF
