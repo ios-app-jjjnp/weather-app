@@ -1,11 +1,11 @@
 # WeatherBeaver
 
 # Team
-Jacob Dumas
-Pauline Cheng
-Nick DiMeglio
-Jonathan Rockett
-Jason
+- Jacob Dumas
+- Pauline Cheng
+- Nick DiMeglio
+- Jonathan Rockett
+- Jason
 
 ## Overview
 ### App Description
