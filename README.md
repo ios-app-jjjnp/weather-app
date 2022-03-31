@@ -109,15 +109,14 @@ At the same time, there are lots of stretch goals that we can establish.
 
 ### Networking
 
-#### In the SettingsViewController we call the weather.gov API with lat and long coordinates generated from a zipcode database
+#### We call the weather.gov API with lat and long coordinates converted from the zipcode with this dynamic string
 let gridBase = "https://api.weather.gov/points/" + json["lat"].rawString()! + "," + json["long"].rawString()!
 
-#### In the JSON document we are given API links for the current weather (forecastHourly) and the future forecast (forecast) and we set those to values our user settings for later use
-#### Examples
+#### After that request we recieve a JSON document. We recieve data along with 2 API links for the current weather and the forecast and we set those to values our user defaults for later use
 "forecast": "https://api.weather.gov/gridpoints/OKX/32,36/forecast",
 "forecastHourly": "https://api.weather.gov/gridpoints/OKX/32,36/forecast/hourly"
 
-#### In WeatherViewController call the API and grab the JSON values.
+#### We can call these API and grab the values for the JSON document for our final values.
 let json = JSON(value)
 let now = json["properties"]["periods"][0]
 var temp = now["temperature"].rawString()
@@ -125,6 +124,7 @@ var unit = now["temperatureUnit"].rawString()
 let place = UserDefaults.standard.string(forKey: "placeName")
 let state = UserDefaults.standard.string(forKey: "stateAbbrv")
 
+### Routes
 * Current weather
    * (Read/GET) Query current weather for zip code
 * Login / registration
