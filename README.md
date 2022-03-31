@@ -5,7 +5,7 @@
 - Pauline Cheng
 - Nick DiMeglio
 - Jonathan Rockett
-- Jason
+- Jason Lee
 
 ## Overview
 ### App Description
