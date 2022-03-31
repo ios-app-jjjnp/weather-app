@@ -54,6 +54,7 @@ At the same time, there are lots of stretch goals that we can establish.
 * ✅ Logged in user preferences are saved on server. Prioritized over locally stored preferences
 
 **Optional Nice-to-have Stories**
+* ✅ User can switch between Celsius and Fahrenheit 
 
 
 ### 2. Screen Archetypes
@@ -93,16 +94,11 @@ At the same time, there are lots of stretch goals that we can establish.
 
 <img src="wireframe.png">
 
-### [BONUS] Digital Wireframes & Mockups
 
-Done, see above
 
-### [BONUS] Interactive Prototype
 
-## TODO Schema 
-[This section will be completed in Unit 9]
-### TODO Models
-
+## Schema 
+#### Models
 #### Post
 
    | Property      | Type     | Description |
