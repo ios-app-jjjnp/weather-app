@@ -110,7 +110,7 @@ At the same time, there are lots of stretch goals that we can establish.
 ### Networking
 
 #### We call the weather.gov API with lat and long coordinates converted from the zipcode with this dynamic string
-let gridBase = "https://api.weather.gov/points/" + json["lat"].rawString()! + "," + json["long"].rawString()!
+* let gridBase = "https://api.weather.gov/points/" + json["lat"].rawString()! + "," + json["long"].rawString()!
 
 #### After that request we recieve a JSON document. We recieve data along with 2 API links for the current weather and the forecast and we set those to values our user defaults for later use
 * "forecast": "https://api.weather.gov/gridpoints/OKX/32,36/forecast",
