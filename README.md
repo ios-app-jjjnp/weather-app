@@ -113,16 +113,16 @@ At the same time, there are lots of stretch goals that we can establish.
 let gridBase = "https://api.weather.gov/points/" + json["lat"].rawString()! + "," + json["long"].rawString()!
 
 #### After that request we recieve a JSON document. We recieve data along with 2 API links for the current weather and the forecast and we set those to values our user defaults for later use
-"forecast": "https://api.weather.gov/gridpoints/OKX/32,36/forecast",
-"forecastHourly": "https://api.weather.gov/gridpoints/OKX/32,36/forecast/hourly"
+* "forecast": "https://api.weather.gov/gridpoints/OKX/32,36/forecast",
+* "forecastHourly": "https://api.weather.gov/gridpoints/OKX/32,36/forecast/hourly"
 
 #### We can call these API and grab the values for the JSON document for our final values.
-let json = JSON(value)
-let now = json["properties"]["periods"][0]
-var temp = now["temperature"].rawString()
-var unit = now["temperatureUnit"].rawString()
-let place = UserDefaults.standard.string(forKey: "placeName")
-let state = UserDefaults.standard.string(forKey: "stateAbbrv")
+* let json = JSON(value)
+* let now = json["properties"]["periods"][0]
+* var temp = now["temperature"].rawString()
+* var unit = now["temperatureUnit"].rawString()
+* let place = UserDefaults.standard.string(forKey: "placeName")
+* let state = UserDefaults.standard.string(forKey: "stateAbbrv")
 
 ### Routes
 * Current weather
