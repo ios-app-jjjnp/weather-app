@@ -135,4 +135,17 @@ At the same time, there are lots of stretch goals that we can establish.
 * Settings
    * (Update/PUT) Update user zip code
 
-### Final Demo GIF
+## Final Demo GIFs
+
+### Register/Login
+![](register_login.gif)
+
+### View forecasts from desired ZIP Code
+![](forecast.gif)
+
+### Data Persistance during Logout/Login
+![](persistence.gif)
+
+### View Temperature in Celsius
+![](celsuis.gif)
+
